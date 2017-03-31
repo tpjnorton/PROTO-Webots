@@ -1,5 +1,5 @@
 {
-  "name": "PROTO-Webots",
+  "name": "language-proto-webots",
   "version": "0.1.0",
   "description": "Webots-flavoured PROTO Syntax Highlighting Support in Atom",
   "engines": {
