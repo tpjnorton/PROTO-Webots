@@ -1,0 +1,17 @@
+{
+  "name": "PROTO-Webots",
+  "version": "0.1.0",
+  "description": "Webots-flavoured PROTO Syntax Highlighting Support in Atom",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tn12787/PROTO-Webots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tn12787/PROTO-Webots/issues"
+  },
+  "license": "MIT"
+}
