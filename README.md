@@ -1,6 +1,6 @@
 # language-proto-webots
 
-![Screenshot](https://raw.githubusercontent.com/tn12787/PROTO-Webots/resources/protoatom.PNG)
+![Screenshot](./resources/protoatom.PNG)
 
 Webots-flavoured PROTO Syntax Highlighting Support in Atom!
 
