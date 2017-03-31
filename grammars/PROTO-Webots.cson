@@ -4,6 +4,48 @@
 
 'patterns': [
   {
+    'match': '(?<=\.)(\\w+?)(?=\\()'
+    'name': 'storage.type'
+  },
+  {
+    'match': '(\\w*?)(?=\\()'
+    'name': 'storage.type'
+  },
+  {
+    'begin': '\"'
+    'beginCaptures':
+        '0':
+            'name': 'punctuation.definition.string.begin'
+    'end': '\"'
+    'endCaptures':
+        '0':
+            'name': 'punctuation.definition.string.end'
+    'name': 'string.quoted.double'
+    'patterns': [
+        {
+            'match': '\\.'
+            'name': 'constant.character.escape'
+        }
+    ]
+  },
+  {
+    'begin': '\''
+    'beginCaptures':
+        '0':
+            'name': 'punctuation.definition.string.begin'
+    'end': '\''
+    'endCaptures':
+        '0':
+            'name': 'punctuation.definition.string.end'
+    'name': 'string.quoted.single'
+    'patterns': [
+        {
+            'match': '\\.'
+            'name': 'constant.character.escape'
+        }
+    ]
+  },
+  {
     'match': '\#(\\w|\\s|\\W|\\n|\\r\\n)*'
     'name': 'comment.line.number-sign'
   },
@@ -36,14 +78,6 @@
     'name': 'constant.language'
   },
   {
-    'match': '(?<=\.)(\\w*?)(?=\\()'
-    'name': 'storage.type'
-  },
-  {
-    'match': '(\\w*?)(?=\\()'
-    'name': 'storage.type'
-  },
-  {
     'match': '\\b(and|break|do|else|elseif|end|false|for|function|if|in|local|nil|not|or|repeat|return|then|true|until|while)\\b'
     'name': 'keyword.control'
   },
@@ -58,22 +92,5 @@
   {
     'match': '\}\%'
     'name': 'storage.type'
-  },
-  {
-    'begin': '\"'
-    'beginCaptures':
-        '0':
-            'name': 'punctuation.definition.string.begin'
-    'end': '\"'
-    'endCaptures':
-        '0':
-            'name': 'punctuation.definition.string.end'
-    'name': 'string.quoted.double'
-    'patterns': [
-        {
-            'match': '\\.'
-            'name': 'constant.character.escape'
-        }
-    ]
   }
 ]
