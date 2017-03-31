@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle PROTO-Webots",
+        "command": "PROTO-Webots:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "PROTO-Webots",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "PROTO-Webots:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
