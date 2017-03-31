@@ -1,58 +1,58 @@
 'scopeName': 'source.proto'
-'name': "PROTO (Webots)"
+'name': 'PROTO (Webots)'
 'fileTypes': ['proto']
 
 'patterns': [
   {
-    'match': '\b(hidden|field|vrmlField|DEF|USE)\b'
+    'match': '\#(\\w|\\s|\\W|\\n|\\r\\n)*'
+    'name': 'comment.line.number-sign'
+  },
+  {
+    'match': '\-\-(\\w|\\s|\\W|\\n|\\r\\n)*'
+    'name': 'comment.line.number-sign'
+  },
+  {
+    'match': '\\b(hidden|field|vrmlField|DEF|USE|hiddenField)\\b'
     'name': 'storage.modifier'
   },
   {
-    'match': '\b(function|PROTO)\b'
+    'match': '\\b(function|PROTO)\\b'
     'name': 'entity.name.function'
   },
   {
-    'match': '\b(Accelerometer|Appearance|AdvancedMappingAppearance|Background|BallJoint|BallJointParameters|Box|Brake|Camera|Capsule|Charger|Color|Compass|Cone|Connector|ContactProperties|Coordinate|Cylinder|Damping|Device|DifferentialWheels|DirectionalLight|Display|DistanceSensor|ElevationGrid|Emitter|Fluid|Focus|Fog|GPS|Group|Gyro|HingeJoint|HingeJointParameters|Hinge2Joint|ImageTexture|ImmersionProperties|IndexedFaceSet|IndexedLineSet|InertialUnit|Joint|JointParameters|Joystick|Keyboard|LED|Lens|Lidar|Light|LightSensor|LinearMotor|Material|Motor|Pen|Physics|Plane|PointLight|PositionSensor|Propeller|Radar|RangeFinder|Receiver|Robot|RotationalMotor|Servo|Shape|SliderJoint|Slot|Solid|SolidReference|Speaker|Sphere|SpotLight|Supervisor|TextureCoordinate|TextureTransform|TouchSensor|Track|TrackWheel|Transform|Viewpoint|WorldInfo|Zoom)\b'
+    'match': '\\b(Accelerometer|Appearance|AdvancedMappingAppearance|Background|BallJoint|BallJointParameters|Box|Brake|Camera|Capsule|Charger|Color|Compass|Cone|Connector|ContactProperties|Coordinate|Cylinder|Damping|Device|DifferentialWheels|DirectionalLight|Display|DistanceSensor|ElevationGrid|Emitter|Fluid|Focus|Fog|GPS|Group|Gyro|HingeJoint|HingeJointParameters|Hinge2Joint|ImageTexture|ImmersionProperties|IndexedFaceSet|IndexedLineSet|InertialUnit|Joint|JointParameters|Joystick|Keyboard|LED|Lens|Lidar|Light|LightSensor|LinearMotor|Material|Motor|Pen|Physics|Plane|PointLight|PositionSensor|Propeller|Radar|RangeFinder|Receiver|Robot|RotationalMotor|Servo|Shape|SliderJoint|Slot|Solid|SolidReference|Speaker|Sphere|SpotLight|Supervisor|TextureCoordinate|TextureTransform|TouchSensor|Track|TrackWheel|Transform|Viewpoint|WorldInfo|Zoom)\\b'
     'name': 'entity.name.function'
   },
   {
-    'match': '\b(SFBool|SFColor|MFColor|SFFloat|MFFloat|SFImage|SFInt32|MFInt32|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2f|MFVec2f|SFVec3f|MFVec3f|local|IS)\b'
-    'name': 'storage.type'
-  },
-  {
-    'match': '(?<=\.)(\w*?)(?=\()'
-    'name': 'storage.type'
-  },
-  {
-    'match': '(\w*?)(?=\()'
-    'name': 'storage.type'
-  },
-  {
-    'match': '\b(and|break|do|else|elseif|end|false|for|function|if|in|local|nil|not|or|repeat|return|then|true|until|while|\.\.)\b'
-    'name': 'keyword.control'
-  },
-  {
-    'match':  '\b[0-9]+\b'
+    'match': '\\b(?:0|[1-9]\\d*)(?:\.\\d+)?(?:[eE][+\-]?\\d+)?\\b'
     'name': 'constant.numeric'
   },
   {
-    'match': '\#(\w|\s|\W|\n|\r\n)*'
-    'name': 'comment.line.number-sign'
+    'match': '\\b(SFBool|SFColor|MFColor|SFFloat|MFFloat|SFImage|SFInt32|MFInt32|SFNode|MFNode|SFRotation|MFRotation|SFString|MFString|SFTime|MFTime|SFVec2f|MFVec2f|SFVec3f|MFVec3f|local|IS)\\b'
+    'name': 'storage.type'
   },
   {
-    'match': '\-\-(\w|\s|\W|\n|\r\n)*'
-    'name': 'comment.line.number-sign'
-  },
-  {
-    'match': '\'(\w|\s|\W)*\''
-    'name': 'string.quoted.single'
-  },
-  {
-    'match': '\b(TRUE|FALSE)\b'
+    'match': '\\b(TRUE|FALSE|NULL)\\b'
     'name': 'constant.language'
   },
   {
+    'match': '(?<=\.)(\\w*?)(?=\\()'
+    'name': 'storage.type'
+  },
+  {
+    'match': '(\\w*?)(?=\\()'
+    'name': 'storage.type'
+  },
+  {
+    'match': '\\b(and|break|do|else|elseif|end|false|for|function|if|in|local|nil|not|or|repeat|return|then|true|until|while)\\b'
+    'name': 'keyword.control'
+  },
+  {
     'match': '\%\{'
+    'name': 'storage.type'
+  },
+  {
+    'match': '\%\{\='
     'name': 'storage.type'
   },
   {
@@ -60,18 +60,18 @@
     'name': 'storage.type'
   },
   {
-    'begin': '\''
+    'begin': '\"'
     'beginCaptures':
         '0':
             'name': 'punctuation.definition.string.begin'
-    'end': '\''
+    'end': '\"'
     'endCaptures':
         '0':
             'name': 'punctuation.definition.string.end'
-    'name': 'string.quoted.single'
+    'name': 'string.quoted.double'
     'patterns': [
         {
-            'match': '\\.'
+            'match': '\\'
             'name': 'constant.character.escape'
         }
     ]
