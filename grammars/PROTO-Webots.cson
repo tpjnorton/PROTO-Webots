@@ -71,7 +71,7 @@
     'name': 'string.quoted.double'
     'patterns': [
         {
-            'match': '\\'
+            'match': '\\.'
             'name': 'constant.character.escape'
         }
     ]
