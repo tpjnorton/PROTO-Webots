@@ -12,7 +12,7 @@
     'name': 'comment.line.number-sign'
   },
   {
-    'match': '\\b(deprecatedField|hiddenField|hidden|field|vrmlField|DEF|USE|hiddenField)\\b'
+    'match': '\\b(deprecatedField|hiddenField|hidden|field|vrmlField|DEF|USE)\\b'
     'name': 'storage.modifier'
   },
   {
